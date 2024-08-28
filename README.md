@@ -28,59 +28,58 @@ SatelliMap is a satellite map drawing tool built with React, TypeScript, Leaflet
 
 ### Setup
 
-Clone the repository:
+1. Clone the repository:
 ```
 git clone https://github.com/matheuseabra/satellimap
 ```
 
 #### Server
-From root directory, move into `/server` folder:
+2. From root directory, move into `/server` folder:
 ```
 cd server
 ```
 
-Install dependencies:
+3. Install dependencies:
 ```
 npm install
 ```
 
-Set up environment variables:
+4. Set up Supabase:
+    1. Sign/Sign up to [Supabase](https://supabase.com/)
+    2. Create a new database project 
+    3. Run the SQL commands provided in the `database_setup.sql` file on Supabase's SQL Editor, in order to create the necessary tables and sample data (important).
+
+5. Set up environment variables:
 Create a `.env` file in the root directory and add the following:
 ```
 SUPABASE_URL=your_supabase_project_url
 SUPABASE_ANON_KEY=your_supabase_api_key
 ```
 
-Set up Supabase:
-- Create a new project in Supabase
-- Run the SQL commands provided in the `database_setup.sql` file to create the necessary tables
-
-Run the API in development mode:
+6. Run the server in development mode:
 ```
 npm run dev
 ```
 
-API should be up and running on [http://localhost:9000](http://localhost:9000)
+Server should be up and running on [http://localhost:9000](http://localhost:9000)
 
 #### Client
-From root directory, move into `/client` folder:
+1. From root directory, move into `/client` folder:
 ```
 cd client
 ```
 
-Install dependencies:
+2. Install dependencies:
 ```
 npm install
 ```
 
-Set up environment variables:
+3. Set up environment variables:
 Create a `.env` file in the root directory and add the following:
-
 ```
 REACT_APP_API_URL=http://localhost:9000/
 ```
-Run the client app
-
+4. Run the client:
 ```
 npm start
 ```
@@ -96,7 +95,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to see the a
 
 ## API Routes
 
-- `GET /api/images/:imageId` - Get image URL
+- `GET /api/images` - Get initial map image URL
 - `GET /api/images/:imageId/objects` - Get all objects for an image
 - `POST /api/images/:imageId/objects` - Create a new object
 - `PUT /api/images/:imageId/objects/:objectId` - Update an object
