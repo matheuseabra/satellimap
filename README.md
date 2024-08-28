@@ -1,8 +1,8 @@
-# SatelliMap - Satellite Image Processing Application
+# 🌎 SatelliMap
 
-## Overview
+<img src="https://github.com/matheuseabra/satellimap/tree/main/docs/satellimap-view.png" />
 
-This application is a collaborative satellite image processing tool built with React, Leaflet, Node.js and Supabase. It allows users to view satellite images, draw objects (rectangles and polygons) on them, and manage these objects through a intuitive, minimalist interface.
+SatelliMap is a satellite map drawing tool built with React, TypeScript, Leaflet, Node.js and Supabase. It allows to view satellite images, draw objects (rectangles and polygons) on them, and manage these objects through a intuitive, minimalist interface.
 
 ## Features
 
@@ -12,19 +12,11 @@ This application is a collaborative satellite image processing tool built with R
 
 ## Architecture
 
-The application is built using the following technologies:
-
 - **Frontend**: React/TypeScript
-- **Backend**: Express.js 
+- **Backend**: Express.js/TypeScript 
 - **Database**: Supabase (PostgreSQL)
 - **Map Visualization**: react-leaflet
 - **Drawing Tools**: react-leaflet-draw
-
-The application follows a modular architecture with the following main components:
-
-- `Map`: Renders the satellite image
-- `DrawToolBar`: Controls the drawing functionality
-- `useObjectsApi`: Custom hook for API interactions
 
 ## Getting Started
 
@@ -37,25 +29,62 @@ The application follows a modular architecture with the following main component
 ### Setup
 
 1. Clone the repository:
+```
+git clone https://github.com/matheuseabra/satellimap
+```
+
+### Server
+From root directory, move into server folder:
+```
+cd server
+```
 
 2. Install dependencies:
+```
 npm install
+```
 
 3. Set up environment variables:
 Create a `.env` file in the root directory and add the following:
-
-NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-
+```
+SUPABASE_URL=your_supabase_project_url
+SUPABASE_ANON_KEY=your_supabase_api_key
+```
 
 4. Set up Supabase:
 - Create a new project in Supabase
 - Run the SQL commands provided in the `database_setup.sql` file to create the necessary tables
 
-5. Run the development server:
+5. Run the API in development mode:
+```
+npm run dev
+```
 
+API should be up and running on port 9000.
 
-6. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
+### Client
+```
+cd client
+```
+
+6. Install dependenciies
+```
+npm install
+```
+
+7. Set up environment variables:
+Create a `.env` file in the root directory and add the following:
+
+```
+REACT_APP_API_URL=http://localhost:9000/health
+```
+8. Run the client app
+
+```
+npm start
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the app up and running.
 
 ## Usage
 
@@ -66,13 +95,13 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 
 ## API Routes
 
-- `GET /api/images/:imageId` - Get satellite image URL
+- `GET /api/images/:imageId` - Get image URL
 - `GET /api/images/:imageId/objects` - Get all objects for an image
 - `POST /api/images/:imageId/objects` - Create a new object
-- `PUT /api/images/:imageId/objects/:objectId` - Update an existing object
+- `PUT /api/images/:imageId/objects/:objectId` - Update an object
 - `DELETE /api/images/:imageId/objects/:objectId` - Delete an object
 
-## Planned Improvements
+## Improvements
 
 1. Implement user authentication and authorization
 2. Add real-time collaboration using Supabase subscriptions
