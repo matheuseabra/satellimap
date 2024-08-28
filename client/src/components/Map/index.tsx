@@ -1,8 +1,9 @@
+import { LatLngBoundsLiteral } from "leaflet";
 import { useEffect, useState } from "react";
 import { MapContainer, Polyline, Rectangle, TileLayer } from "react-leaflet";
 import MapContextProvider from "../../context/MapContext";
 import api from "../../services/api";
-import { Object } from "../../types";
+import { Object1 } from "../../types";
 import DrawLayer from "../DrawLayer";
 
 export const imageId = "fdf52849-1b8e-42ed-8401-065036943aa0";
@@ -17,12 +18,12 @@ const mapConfig = {
 const objectStyle = { color: "#3388FF" };
 
 const Map = () => {
-  const [objects, setObjects] = useState<Object[]>([]);
+  const [objects, setObjects] = useState<Object1[]>([]);
   const [mapImageUrl, setMapImageUrl] = useState("");
 
   const fetchMapImageUrl = async () => {
     try {
-      const { data } = await api.get(`images/${imageId}`);
+      const { data } = await api.get('images');
       setMapImageUrl(data.url);
     } catch (error) {
       console.error(error);
@@ -39,12 +40,12 @@ const Map = () => {
     }
   };
 
-  const renderShape = (object: any, index: number) => {
+  const renderShape = (object: Object1, index: number) => {
     if (object.type === "rectangle") {
       return (
         <Rectangle
           key={index}
-          bounds={object.coordinates as any}
+          bounds={object.coordinates as unknown as LatLngBoundsLiteral}
           pathOptions={objectStyle}
         />
       );
@@ -52,7 +53,7 @@ const Map = () => {
       return (
         <Polyline
           key={index}
-          positions={object.coordinates as any}
+          positions={object.coordinates as unknown as LatLngBoundsLiteral}
           pathOptions={objectStyle}
         />
       );

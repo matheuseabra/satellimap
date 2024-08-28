@@ -1,7 +1,7 @@
 import Map from "./components/Map";
 import NavBar from "./components/Navbar";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <NavBar />

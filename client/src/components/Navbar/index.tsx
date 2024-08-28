@@ -1,5 +1,5 @@
 import logo from "../../assets/logo.png";
-import LatLngBar from "./LatLng";
+import LatLngBar from "./LatLngBar";
 
 const NavBar = () => {
   return (

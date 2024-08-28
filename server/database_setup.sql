@@ -12,3 +12,11 @@ CREATE TABLE objects (
   created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
   updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
+
+INSERT INTO
+  images (id, url)
+VALUES
+  (
+    'fdf52849-1b8e-42ed-8401-065036943aa0',
+    'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png'
+  );

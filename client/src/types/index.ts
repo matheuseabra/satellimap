@@ -3,21 +3,10 @@ interface Coordinate {
   lng: number;
 }
 
-interface Object {
+interface Object1 {
   type: string;
   coordinates: Coordinate[];
 }
 
-interface Feature {
-  type: string;
-  geometry: Record<string, any>;
-  properties: Record<string, any>;
-}
-
-interface GeoJSON {
-  type: string;
-  features: Feature[];
-}
-
-export type { Coordinate, GeoJSON, Object };
+export type { Coordinate, Object1 };
 

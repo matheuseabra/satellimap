@@ -6,7 +6,7 @@ const router = express.Router()
 
 router.get('/health', (_, res) => res.json({ message: 'API is running 🚀' }))
 
-router.get('/images/:id', ImagesController.getImage)
+router.get('/images', ImagesController.getImage)
 
 router.get('/images/:imageId/objects', ObjectsController.getObjects);
 router.post('/images/:imageId/objects', ObjectsController.createObject);

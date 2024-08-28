@@ -43,7 +43,9 @@ const DrawLayer = () => {
     console.log(`onDeleted: removed ${numDeleted} layers`, e);
   }, []);
 
-  const onMounted = useCallback((drawControl) => {}, []);
+  const onMounted = useCallback(() => {
+    console.log("onMounted");
+  }, []);
 
   const onEditStart = useCallback((e) => {
     console.log("onEditStart", e);
