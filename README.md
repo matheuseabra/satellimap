@@ -1,6 +1,6 @@
 # 🌎 SatelliMap
 
-<img src="https://github.com/matheuseabra/satellimap/tree/main/docs/satellimap-view.png" />
+<img src="https://raw.githubusercontent.com/matheuseabra/satellimap/main/docs/satellimap-view.png" />
 
 SatelliMap is a satellite map drawing tool built with React, TypeScript, Leaflet, Node.js and Supabase. It allows to view satellite images, draw objects (rectangles and polygons) on them, and manage these objects through a intuitive, minimalist interface.
 
@@ -28,57 +28,58 @@ SatelliMap is a satellite map drawing tool built with React, TypeScript, Leaflet
 
 ### Setup
 
-1. Clone the repository:
+Clone the repository:
 ```
 git clone https://github.com/matheuseabra/satellimap
 ```
 
-### Server
-From root directory, move into server folder:
+#### Server
+From root directory, move into `/server` folder:
 ```
 cd server
 ```
 
-2. Install dependencies:
+Install dependencies:
 ```
 npm install
 ```
 
-3. Set up environment variables:
+Set up environment variables:
 Create a `.env` file in the root directory and add the following:
 ```
 SUPABASE_URL=your_supabase_project_url
 SUPABASE_ANON_KEY=your_supabase_api_key
 ```
 
-4. Set up Supabase:
+Set up Supabase:
 - Create a new project in Supabase
 - Run the SQL commands provided in the `database_setup.sql` file to create the necessary tables
 
-5. Run the API in development mode:
+Run the API in development mode:
 ```
 npm run dev
 ```
 
-API should be up and running on port 9000.
+API should be up and running on [http://localhost:9000](http://localhost:9000)
 
-### Client
+#### Client
+From root directory, move into `/client` folder:
 ```
 cd client
 ```
 
-6. Install dependenciies
+Install dependencies:
 ```
 npm install
 ```
 
-7. Set up environment variables:
+Set up environment variables:
 Create a `.env` file in the root directory and add the following:
 
 ```
-REACT_APP_API_URL=http://localhost:9000/health
+REACT_APP_API_URL=http://localhost:9000/
 ```
-8. Run the client app
+Run the client app
 
 ```
 npm start
