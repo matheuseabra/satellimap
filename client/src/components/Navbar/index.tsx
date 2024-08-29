@@ -5,7 +5,7 @@ import Logo from "./Logo";
 const NavBar = () => {
   return (
     <header>
-      <nav className="bg-gray-900 border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
+      <nav className="bg-blue-900 border-blue-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
         <div className="flex justify-between items-center mx-auto max-w-screen-xl">
           <Logo />
           <LatLngBar />
