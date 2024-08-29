@@ -16,11 +16,12 @@
     - 🖥️ UI Library: React
     - 🎨 Styling: Tailwind
     - 🔄 Data fetching: axios
+    - 🗺️ Map Visualization: react-leaflet
+    - 🖌️ Drawing Tools: react-leaflet-draw
     - 🛠️ TypeScript
 - **Backend**: Express.js/TypeScript 
 - **Database**: Supabase (PostgreSQL)
-- **Map Visualization**: react-leaflet
-- **Drawing Tools**: react-leaflet-draw
+- **Hosting**: Vercel, Render
 
 ## 🚀 Getting Started
 
