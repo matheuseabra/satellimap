@@ -103,6 +103,9 @@ jobs:
     name: Test
     runs-on: ubuntu-latest
     needs: install
+    env:
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
 
     steps:
       - name: Checkout code
