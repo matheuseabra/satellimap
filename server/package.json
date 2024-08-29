@@ -5,7 +5,7 @@
     "test": "jest",
     "build": "tsc --skipLibCheck",
     "dev": "PORT=9000 nodemon ./src/server.ts",
-    "start": "node ./dist/src/server.js",
+    "start": "node ./dist/server.js",
     "prod": "npm run build && npm run start",
     "lint": "eslint 'src/**/*.{js,ts,tsx}' --quiet"
   },
