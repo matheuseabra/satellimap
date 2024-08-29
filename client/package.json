@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "satellimap-client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -20,6 +20,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "cy:open": "cypress open",
     "eject": "react-scripts eject",
     "lint": "eslint src --ext .ts,.tsx"
   },
@@ -43,6 +44,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/preset-typescript": "^7.24.7",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -53,7 +55,9 @@
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^5.5.0",
     "@typescript-eslint/parser": "^5.5.0",
+    "cypress": "^13.14.0",
     "tailwindcss": "^3.4.10",
+    "ts-jest": "^29.2.5",
     "typescript": "^4.9.5"
   }
 }
