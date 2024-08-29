@@ -116,6 +116,11 @@ jobs:
         with:
           node-version: 18.x
 
+      - name: Verify environment variables
+        run: |
+          echo "SUPABASE_URL=$SUPABASE_URL"
+          echo "SUPABASE_ANON_KEY=${{ secrets.SUPABASE_ANON_KEY }}"
+
       - name: Test server
         working-directory: ./server
         run: |
