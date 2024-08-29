@@ -24,7 +24,7 @@ const Map = () => {
   const fetchMapImageUrl = async () => {
     try {
       const { data } = await api.get('images');
-      setMapImageUrl(data.url);
+      setMapImageUrl(data);
     } catch (error) {
       console.error(error);
     }

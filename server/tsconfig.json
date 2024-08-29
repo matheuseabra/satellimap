@@ -9,9 +9,12 @@
     "sourceMap": true,
     "target": "es2017",
     "outDir": "./dist",
-    "baseUrl": "./lib",
-    "lib": ["es2017", "dom", "esnext"]
+    "baseUrl": "./src",
+    "lib": ["es2017", "dom", "esnext"],
+    "skipLibCheck": true,
+    "types": [],
+    "typeRoots": ["node_modules/@types"]
   },
   "include": ["src/**/*.ts"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "node_modules/@supabase/**"]
 }
