@@ -1,6 +1,6 @@
 # 🌎 SatelliMap
 
-<img src="https://raw.githubusercontent.com/matheuseabra/satellimap/main/docs/satellimap-view.png" />
+<img src="https://raw.githubusercontent.com/matheuseabra/satellimap/main/.docs/satellimap-view.png" />
 
 SatelliMap is a satellite map drawing tool built with React, TypeScript, Leaflet, Node.js and Supabase. It allows to view satellite images, draw objects (rectangles and polygons) on them, and manage these objects through a intuitive, minimalist interface.
 
@@ -12,7 +12,11 @@ SatelliMap is a satellite map drawing tool built with React, TypeScript, Leaflet
 
 ## Architecture
 
-- **Frontend**: React/TypeScript
+- **Frontend**: 
+    - UI Library: React
+    - Styling: Tailwind
+    - Data fetching: axios
+    - TypeScript
 - **Backend**: Express.js/TypeScript 
 - **Database**: Supabase (PostgreSQL)
 - **Map Visualization**: react-leaflet
@@ -22,7 +26,7 @@ SatelliMap is a satellite map drawing tool built with React, TypeScript, Leaflet
 
 ### Prerequisites
 
-- Node.js (v14 or later)
+- Node.js (v16 or later)
 - npm or yarn
 - Supabase account
 
