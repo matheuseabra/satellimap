@@ -118,7 +118,7 @@ jobs:
 
       - name: Verify environment variables
         run: |
-          echo "SUPABASE_URL=$SUPABASE_URL"
+          echo "SUPABASE_URL=${{ secrets.SUPABASE_URL }}"
           echo "SUPABASE_ANON_KEY=${{ secrets.SUPABASE_ANON_KEY }}"
 
       - name: Test server
