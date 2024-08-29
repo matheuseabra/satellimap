@@ -6,6 +6,8 @@ const useMapContext = () => {
   const map = mapInstance?.map;
   const setMap = mapInstance?.setMap;
 
+  console.log({ map });
+
   return { map, setMap };
 };
 

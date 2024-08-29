@@ -3,10 +3,10 @@ interface Coordinate {
   lng: number;
 }
 
-interface Object1 {
+interface MapObject {
   type: string;
   coordinates: Coordinate[];
 }
 
-export type { Coordinate, Object1 };
+export type { Coordinate, MapObject };
 

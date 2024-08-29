@@ -1,22 +1,23 @@
-import logo from "../../assets/logo.png";
+import { FaGithub } from "react-icons/fa6";
 import LatLngBar from "./LatLngBar";
+import Logo from "./Logo";
 
 const NavBar = () => {
   return (
     <header>
       <nav className="bg-gray-900 border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
-        <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-          <span className="flex items-center">
-            <img
-              src={logo}
-              className="mr-3 h-6 sm:h-9"
-              alt="SatelliMap Logo"
-            />
-            <span className="text-white self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-              SatelliMap
-            </span>
-            <LatLngBar />
-          </span>
+        <div className="flex justify-between items-center mx-auto max-w-screen-xl">
+          <Logo />
+          <LatLngBar />
+          <a
+            href="https://github.com/matheuseabra/satellimap"
+            target="_blank"
+            className="flex items-center text-base font-bold text-white ml-4 hover:text-white"
+            rel="noreferrer"
+          >
+            <FaGithub color="#fff" className="mr-2" size={20} />
+            GitHub
+          </a>
         </div>
       </nav>
     </header>
