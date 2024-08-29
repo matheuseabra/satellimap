@@ -132,7 +132,8 @@ jobs:
           npm test
 
   e2e:
-    runs-on: ubuntu-20.04
+    name: E2E Tests
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout 🛎
         uses: actions/checkout@v2
@@ -142,9 +143,7 @@ jobs:
 
       - name: Install and run Cypress tests 🌲
         working-directory: ./client
-        uses: cypress-io/github-action@v2
-        with:
-          start: npm start
+        uses: cypress-io/github-action@v6
 
   deploy:
     name: Deploy
