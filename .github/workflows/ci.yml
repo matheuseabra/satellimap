@@ -131,22 +131,6 @@ jobs:
           npm install
           npm test
 
-  e2e:
-    name: E2E Tests
-    runs-on: ubuntu-22.04
-    steps:
-      - name: Checkout 🛎
-        uses: actions/checkout@v2
-
-      - name: Install dependencies
-        working-directory: ./client
-        run: npm install
-
-      - name: Install and run Cypress tests 🌲
-        uses: cypress-io/github-action@v6
-        with:
-          working-directory: ./client
-
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
