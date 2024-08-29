@@ -131,6 +131,15 @@ jobs:
           npm install
           npm test
 
+  e2e:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout 🛎
+        uses: actions/checkout@v2
+
+      - name: Install and run Cypress tests 🌲
+        uses: cypress-io/github-action@v2
+
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
