@@ -133,12 +133,12 @@ jobs:
 
   e2e:
     runs-on: ubuntu-20.04
+    working-directory: ./client
     steps:
       - name: Checkout 🛎
         uses: actions/checkout@v2
 
       - name: Install and run Cypress tests 🌲
-        working-directory: ./client
         uses: cypress-io/github-action@v2
 
   deploy:
