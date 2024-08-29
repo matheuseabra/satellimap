@@ -1,28 +1,28 @@
 # 🌎 SatelliMap
 
-<img src="https://raw.githubusercontent.com/matheuseabra/satellimap/main/.docs/satellimap-view.png" />
+![SatelliMap Screenshot](https://raw.githubusercontent.com/matheuseabra/satellimap/main/.docs/satellimap-view.png)
 
-SatelliMap is a satellite map drawing tool built with React, TypeScript, Leaflet, Node.js and Supabase. It allows to view satellite images, draw objects (rectangles and polygons) on them, and manage these objects through a intuitive, minimalist interface.
+**SatelliMap** is a satellite map drawing tool built with React, TypeScript, Leaflet, Node.js, and Supabase. It allows you to view satellite images, draw objects (rectangles and polygons) on them, and manage these objects through an intuitive, minimalist interface.
 
-## Features
+## ✨ Features
 
-- Display satellite images
-- Draw rectangles and polygons on images
-- List, edit, and delete drawn objects
+- 🗺️ Display satellite images
+- 🖍️ Draw rectangles and polygons on images
+- 📋 List, edit, and delete drawn objects
 
-## Architecture
+## 🏗️ Architecture
 
 - **Frontend**: 
-    - UI Library: React
-    - Styling: Tailwind
-    - Data fetching: axios
-    - TypeScript
+    - 🖥️ UI Library: React
+    - 🎨 Styling: Tailwind
+    - 🔄 Data fetching: axios
+    - 🛠️ TypeScript
 - **Backend**: Express.js/TypeScript 
 - **Database**: Supabase (PostgreSQL)
 - **Map Visualization**: react-leaflet
 - **Drawing Tools**: react-leaflet-draw
 
-## Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
 
@@ -38,7 +38,7 @@ git clone https://github.com/matheuseabra/satellimap
 ```
 
 #### Server
-2. From root directory, move into `/server` folder:
+2. From the root directory, move into the `/server` folder:
 ```
 cd server
 ```
@@ -49,9 +49,9 @@ npm install
 ```
 
 4. Set up Supabase:
-    1. Sign/Sign up to [Supabase](https://supabase.com/)
-    2. Create a new database project 
-    3. Run the SQL commands provided in the `database_setup.sql` file on Supabase's SQL Editor, in order to create the necessary tables and sample data (important).
+    1. 🔑 Sign in/Sign up to [Supabase](https://supabase.com/)
+    2. 🛠️ Create a new database project
+    3. 📄 Run the SQL commands provided in the `database_setup.sql` file on Supabase's SQL Editor, in order to create the necessary tables and sample data (important).
 
 5. Set up environment variables:
 Create a `.env` file in the root directory and add the following:
@@ -65,10 +65,10 @@ SUPABASE_ANON_KEY=your_supabase_api_key
 npm run dev
 ```
 
-Server should be up and running on [http://localhost:9000](http://localhost:9000)
+The server should be up and running on [http://localhost:9000](http://localhost:9000).
 
 #### Client
-1. From root directory, move into `/client` folder:
+1. From the root directory, move into the `/client` folder:
 ```
 cd client
 ```
@@ -83,21 +83,21 @@ Create a `.env` file in the root directory and add the following:
 ```
 REACT_APP_API_URL=http://localhost:9000/
 ```
-4. Run the client:
+4. ▶️ Run the client:
 ```
 npm start
 ```
 
 Open [http://localhost:3000](http://localhost:3000) in your browser to see the app up and running.
 
-## Usage
+## 💡 Tips
 
 1. The main page displays a satellite image.
 2. Use the drawing tools to create rectangles or polygons on the image.
 3. The sidebar shows a list of all objects created on the current image.
 4. Click on an object in the list to edit or delete it.
 
-## API Routes
+## ⚙️ API Routes
 
 - `GET /api/images` - Get initial map image URL
 - `GET /api/images/:imageId/objects` - Get all objects for an image
@@ -105,22 +105,22 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to see the a
 - `PUT /api/images/:imageId/objects/:objectId` - Update an object
 - `DELETE /api/images/:imageId/objects/:objectId` - Delete an object
 
-## Improvements
+## 🚧 Improvements
 
-1. Implement user authentication and authorization
-2. Add real-time collaboration using Supabase subscriptions
-3. Improve performance for large datasets
-4. Enhance accessibility features
-5. Implement comprehensive error handling and user feedback
-6. Add unit and integration tests
-7. Create a more user-friendly interface for editing object coordinates
-8. Implement pagination, filtering, and sorting for the object list
-9. Add support for more complex object types and properties
+1. 🔐 Implement user authentication and authorization
+2. 👥 Add real-time collaboration using Supabase subscriptions
+3. ⚡ Improve performance for large datasets
+4. ♿ Enhance accessibility features
+5. 🛠️ Implement comprehensive error handling and user feedback
+6. 🧪 Add unit and integration tests
+7. ✏️ Create a more user-friendly interface for editing object coordinates
+8. 📊 Implement pagination, filtering, and sorting for the object list
+9. 🛑 Add support for more complex object types and properties
 
-## Contributing
+## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## License
+## 📄 License
 
 This project is licensed under the MIT License.
